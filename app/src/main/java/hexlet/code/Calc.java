@@ -11,6 +11,7 @@ public class Calc {
     public static String userAnswer;
 
     public static void calc() {
+        flag = true;
         System.out.println("Here");
     }
 

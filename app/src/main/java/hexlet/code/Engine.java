@@ -1,40 +1,35 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import  hexlet.code.Even;
+import hexlet.code.Even;
 public class Engine {
     public static String username;
-
-    public static final void Start(int game) {
+    public static void init(int gameNumber, String trulyAnswer, String gameGreeting) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         username = scanner.next();
         System.out.println(String.format("Hello, %s!", username));
+        System.out.println(gameGreeting);
         for (var i = 1; i <= 3; i++) {
-            switch (game) {
-                case 1:
-                    break;
-                case 2:
-                    Even.even();
-                    break;
+            Scanner scanner1 = new Scanner(System.in);
+            if (gameNumber == 2) {
+                var gameLogic = Even.even();
+                System.out.println(String.format("Question: %s ", gameLogic));
             }
-            if (Even.flag) {
+            System.out.print("Your answer: ");
+            String userAnswer = scanner1.next();
+            if (userAnswer.equals(trulyAnswer)) {
                 System.out.println("Correct!");
-            }
-
-            if (!Even.flag) {
-                var trueAnswer = Even.typeOfAnswer;
-                var userAnswer = Even.userAnswer;
-                var output = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!", userAnswer, trueAnswer, username);
-                System.out.println(output);
-                break;
+            } else {
+                var message = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!", userAnswer, trulyAnswer, username);
+                System.out.println(message);
+                return;
             }
 
             if (i == 3) {
-                var congMessage = String.format("Congratulations, %s!", username);
-                System.out.println(congMessage);
-            }
+                System.out.println(String.format("Congratulations, %s!", username));
             }
         }
     }
+}
