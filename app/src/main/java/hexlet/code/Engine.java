@@ -1,8 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import java.util.function.UnaryOperator;
-import hexlet.code.Even;
+
 public class Engine {
     public static String username;
     public static void init(String[][] gameLogic,String gameGreeting) {
@@ -25,7 +24,6 @@ public class Engine {
                 System.out.println(message);
                 return;
             }
-
             if (i == 2) {
                 System.out.println(String.format("Congratulations, %s!", username));
             }

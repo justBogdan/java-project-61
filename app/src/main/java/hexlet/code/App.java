@@ -1,8 +1,9 @@
 package hexlet.code;
 import java.util.Scanner;
-import hexlet.code.Even;
-import hexlet.code.Calc;
-import hexlet.code.Engine;
+
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 public class App {
     public static String gameNumber;
     public static void main(String[] args) {
@@ -19,6 +20,9 @@ public class App {
         }
         if (parsedNumber == 2) {
             Engine.init(Even.even(),Even.gameCondition);
+        }
+        if (parsedNumber == 3) {
+            Engine.init(Calc.calc(), Calc.gameCondition);
         }
 
     }
