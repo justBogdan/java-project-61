@@ -42,7 +42,7 @@ public class Progression {
         String[] result = new String[] {String.join(" ", copyOfProgression), trulyAnswer};
         return result;
     }
-    
+
     public static int generateLength() {
         var random = new Random();
         return random.nextInt(5) + 5;

@@ -6,8 +6,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
-
-import static hexlet.code.games.GCD.*;
+import hexlet.code.games.Prime;
 
 public class App {
     public static String gameNumber;
@@ -17,6 +16,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice? ");
@@ -36,6 +36,9 @@ public class App {
         }
         if (parsedNumber == 5) {
             Engine.init(Progression.progression(), Progression.gameCondition);
+        }
+        if (parsedNumber == 6) {
+            Engine.init(Prime.prime(), Prime.gameCondition);
         }
     }
 }
