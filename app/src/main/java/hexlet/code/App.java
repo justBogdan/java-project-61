@@ -1,9 +1,11 @@
 package hexlet.code;
 import java.util.Scanner;
+import java.util.Arrays;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import static hexlet.code.games.GCD.*;
 
@@ -14,6 +16,7 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice? ");
@@ -31,6 +34,8 @@ public class App {
         if (parsedNumber == 4) {
             Engine.init(GCD.gcd(), GCD.gameCondition);
         }
-
+        if (parsedNumber == 5) {
+            Engine.init(Progression.progression(), Progression.gameCondition);
+        }
     }
 }
