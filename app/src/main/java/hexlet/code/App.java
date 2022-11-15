@@ -2,11 +2,7 @@ package hexlet.code;
 import java.util.Scanner;
 import java.util.Arrays;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
+import hexlet.code.games.*;
 
 public class App {
     public static String gameNumber;
@@ -23,7 +19,7 @@ public class App {
         gameNumber = scanner.next();
         var parsedNumber = Integer.parseInt(gameNumber);
         if (parsedNumber == 1) {
-            scanner.close();
+            Greeting.greeting();
         }
         if (parsedNumber == 2) {
             Engine.init(Even.even(),Even.gameCondition);
