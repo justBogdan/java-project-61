@@ -1,14 +1,14 @@
 package hexlet.code.games;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Prime {
-    public static String gameCondition = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static String[][] prime() {
-        var case1 = Integer.toString(generate(1, 10));
-        var case2 = Integer.toString(generate(1, 20));
-        var case3 = Integer.toString(generate(1, 30));
+        var min = 1;
+        var max = 30;
+        var case1 = Integer.toString(generate(min, max));
+        var case2 = Integer.toString(generate(min, max));
+        var case3 = Integer.toString(generate(min, max));
         String[][] result = new String[][]{{case1, isPrime(case1)}, {case2, isPrime(case2)}, {case3, isPrime(case3)}};
         return result;
     }

@@ -1,12 +1,9 @@
 package hexlet.code.games;
 
-
-import java.util.Scanner;
 import java.util.Random;
 
 public class Calc {
-    public static String trulyAnswer;
-    public static String gameCondition = "What is the result of the expression?";
+    private static String trulyAnswer;
     public static String[][] calc() {
         var case1 = generate("-");
         var case2 = generate("+");
@@ -16,8 +13,9 @@ public class Calc {
     }
     public static String[] generate(String sign) {
         var random = new Random();
-        var randomNum1 = random.nextInt(20);
-        var randomNum2 = random.nextInt(20);
+        var upperBoard = 20;
+        var randomNum1 = random.nextInt(upperBoard);
+        var randomNum2 = random.nextInt(upperBoard);
 
         if (sign.equals("+")) {
             trulyAnswer = Integer.toString(randomNum1 + randomNum2);

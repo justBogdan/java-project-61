@@ -3,10 +3,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static String username;
-    public static void init(String[][] gameLogic,String gameGreeting) {
+    private static String username;
+    public static void init(String[][] gameLogic, String gameGreeting) {
         Scanner scanner = new Scanner(System.in);
         var counterOfTrueAnswers = 0;
+        var counterForCongratulations = 3;
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         username = scanner.next();
@@ -21,11 +22,12 @@ public class Engine {
                 counterOfTrueAnswers += 1;
                 System.out.println("Correct!");
             } else {
-                var message = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!", userAnswer, gameLogic[i][1], username);
+                var message = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", userAnswer, gameLogic[i][1]);
                 System.out.println(message);
+                System.out.println(String.format("Let's try again, %s!", username));
                 return;
             }
-            if (counterOfTrueAnswers == 3) {
+            if (counterOfTrueAnswers == counterForCongratulations) {
                 System.out.println(String.format("Congratulations, %s!", username));
             }
         }

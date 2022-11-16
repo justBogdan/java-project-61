@@ -1,11 +1,15 @@
 package hexlet.code;
 import java.util.Scanner;
-import java.util.Arrays;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Greeting;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 public class App {
-    public static String gameNumber;
+    private static String gameNumber;
     public static void main(String[] args) {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -18,23 +22,32 @@ public class App {
         System.out.print("Your choice? ");
         gameNumber = scanner.next();
         var parsedNumber = Integer.parseInt(gameNumber);
-        if (parsedNumber == 1) {
+        int[] serialNumberOfgame = new int[] {0,1,2,3,4,5,6,7};
+        var calcCondition = "What is the result of the expression?";
+        var evenCondition = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        var gcdCondition = "Find the greatest common divisor of given numbers.";
+        var primeCondition = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        var progressionCondition = "What number is missing in the progression?";
+        if (parsedNumber == serialNumberOfgame[0]) {
+            scanner.close();
+        }
+        if (parsedNumber == serialNumberOfgame[1]) {
             Greeting.greeting();
         }
-        if (parsedNumber == 2) {
-            Engine.init(Even.even(),Even.gameCondition);
+        if (parsedNumber == serialNumberOfgame[2]) {
+            Engine.init(Even.even(), evenCondition);
         }
-        if (parsedNumber == 3) {
-            Engine.init(Calc.calc(), Calc.gameCondition);
+        if (parsedNumber == serialNumberOfgame[3]) {
+            Engine.init(Calc.calc(), calcCondition);
         }
-        if (parsedNumber == 4) {
-            Engine.init(GCD.gcd(), GCD.gameCondition);
+        if (parsedNumber == serialNumberOfgame[4]) {
+            Engine.init(GCD.gcd(), gcdCondition);
         }
-        if (parsedNumber == 5) {
-            Engine.init(Progression.progression(), Progression.gameCondition);
+        if (parsedNumber == serialNumberOfgame[5]) {
+            Engine.init(Progression.progression(), progressionCondition);
         }
-        if (parsedNumber == 6) {
-            Engine.init(Prime.prime(), Prime.gameCondition);
+        if (parsedNumber == serialNumberOfgame[6]) {
+            Engine.init(Prime.prime(), primeCondition);
         }
     }
 }

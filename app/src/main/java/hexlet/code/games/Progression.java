@@ -4,14 +4,13 @@ import java.util.Random;
 import java.util.Arrays;
 
 public class Progression {
-    public static String gameCondition = "What number is missing in the progression?";
-
     public static String[][] progression () {
 
         var random = new Random();
-        var randomStart1 = random.nextInt(5);
-        var randomStart2 = random.nextInt(7);
-        var randomStart3 = random.nextInt(10);
+        var upperBoard = 10;
+        var randomStart1 = random.nextInt(upperBoard);
+        var randomStart2 = random.nextInt(upperBoard);
+        var randomStart3 = random.nextInt(upperBoard);
 
         var case1 = generateProgression(randomStart1,generateLength());
         var case2 = generateProgression(randomStart2,generateLength());
@@ -20,7 +19,7 @@ public class Progression {
         String[][] result = new String[][] {blur(case1), blur(case2), blur(case3)};
         return result;
 }
-    public static String[] generateProgression(int start, int lengthOfProgression) {
+    public static String[] generateProgression (int start, int lengthOfProgression) {
         var random = new Random(1);
         var randomStep = random.nextInt(4);
         String[] progression = new String[lengthOfProgression];
