@@ -19,9 +19,9 @@ public class GCD {
      var trulyAnswer11 = Integer.toString(findGcd(randomNum2, randomNum3));
      var trulyAnswer21 = Integer.toString(findGcd(randomNum3, randomNum1));
 
-     String[][] caseAndTrulyAnswer = new String[][] {{case1, trulyAnswer01}, {case2, trulyAnswer11}, {case3, trulyAnswer21}};
+     String[][] cases = new String[][] {{case1, trulyAnswer01}, {case2, trulyAnswer11}, {case3, trulyAnswer21}};
 
-     return caseAndTrulyAnswer;
+     return cases;
     }
     public static int findGcd(int a, int b) {
         if (a % b == 0) {
