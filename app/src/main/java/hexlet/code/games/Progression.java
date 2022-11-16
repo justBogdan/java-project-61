@@ -46,7 +46,7 @@ public class Progression {
         return result;
     }
 
-    public static int generateLength() {
+    public static int generateLength () {
         var random = new Random();
         return random.nextInt(boundOfLength) + frontierOfLength;
     }
