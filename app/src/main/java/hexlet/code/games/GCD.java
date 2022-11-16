@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class GCD {
-    private static int upperBoard;
+    private static int upperBoard = 20;
     public static String[][] gcd() {
      var random = new Random();
      var randomNum1 = random.nextInt(upperBoard);
