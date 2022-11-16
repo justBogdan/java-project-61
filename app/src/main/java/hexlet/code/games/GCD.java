@@ -3,9 +3,9 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class GCD {
+    private static int upperBoard;
     public static String[][] gcd() {
      var random = new Random();
-     var upperBoard = 100;
      var randomNum1 = random.nextInt(upperBoard);
      var randomNum2 = random.nextInt(upperBoard);
      var randomNum3 = random.nextInt(upperBoard);
