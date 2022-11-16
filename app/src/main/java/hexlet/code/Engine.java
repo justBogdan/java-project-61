@@ -27,9 +27,10 @@ public class Engine {
                 System.out.println(mess + mess2);
                 return;
             }
-            if (counterOfTrueAnswers == COUNTER_FOR_CONGRATULATIONS) {
-                System.out.println(String.format("Congratulations, %s!", username));
-            }
+        }
+
+        if (counterOfTrueAnswers == COUNTER_FOR_CONGRATULATIONS) {
+            System.out.println(String.format("Congratulations, %s!", username));
         }
     }
 }
