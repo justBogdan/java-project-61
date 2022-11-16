@@ -12,9 +12,9 @@ public class Progression {
         var randomStart2 = random.nextInt(upperBoard);
         var randomStart3 = random.nextInt(upperBoard);
 
-        var case1 = generateProgression(randomStart1,generateLength());
-        var case2 = generateProgression(randomStart2,generateLength());
-        var case3 = generateProgression(randomStart3,generateLength());
+        var case1 = generateProgression(randomStart1, generateLength());
+        var case2 = generateProgression(randomStart2, generateLength());
+        var case3 = generateProgression(randomStart3, generateLength());
 
         String[][] result = new String[][] {blur(case1), blur(case2), blur(case3)};
         return result;
@@ -31,7 +31,7 @@ public class Progression {
         return progression;
     }
 
-    public static String[] blur(String[] progression) {
+    public static String[] blur (String[] progression) {
         var random = new Random();
         var randomIndex = random.nextInt(progression.length - 1);
         var copyOfProgression = progression.clone();

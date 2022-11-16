@@ -22,32 +22,39 @@ public class App {
         System.out.print("Your choice? ");
         gameNumber = scanner.next();
         var parsedNumber = Integer.parseInt(gameNumber);
-        int[] serialNumberOfgame = new int[] {0,1,2,3,4,5,6,7};
+        var greetingNum = 1;
+        var evenNum = 2;
+        var calcNum = 3;
+        var gcdNum = 4;
+        var progressionNum = 5;
+        var primeNum = 6;
+        var exitNum = 0;
+
         var calcCondition = "What is the result of the expression?";
         var evenCondition = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         var gcdCondition = "Find the greatest common divisor of given numbers.";
         var primeCondition = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         var progressionCondition = "What number is missing in the progression?";
-        if (parsedNumber == serialNumberOfgame[0]) {
-            scanner.close();
-        }
-        if (parsedNumber == serialNumberOfgame[1]) {
+        if (parsedNumber == greetingNum) {
             Greeting.greeting();
         }
-        if (parsedNumber == serialNumberOfgame[2]) {
+        if (parsedNumber == evenNum) {
             Engine.init(Even.even(), evenCondition);
         }
-        if (parsedNumber == serialNumberOfgame[3]) {
+        if (parsedNumber == calcNum) {
             Engine.init(Calc.calc(), calcCondition);
         }
-        if (parsedNumber == serialNumberOfgame[4]) {
+        if (parsedNumber == gcdNum) {
             Engine.init(GCD.gcd(), gcdCondition);
         }
-        if (parsedNumber == serialNumberOfgame[5]) {
+        if (parsedNumber == progressionNum) {
             Engine.init(Progression.progression(), progressionCondition);
         }
-        if (parsedNumber == serialNumberOfgame[6]) {
+        if (parsedNumber == primeNum) {
             Engine.init(Prime.prime(), primeCondition);
+        }
+        if (parsedNumber == exitNum) {
+            scanner.close();
         }
     }
 }
