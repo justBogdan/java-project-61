@@ -3,12 +3,13 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class GCD {
-    static final int UPPER_BOARD = 20;
+    static final int UPPER_BOARD = 24;
+    static final int ONE = 1;
     public static String[][] gcd() {
      var random = new Random();
-     var randomNum1 = random.nextInt(UPPER_BOARD);
-     var randomNum2 = random.nextInt(UPPER_BOARD);
-     var randomNum3 = random.nextInt(UPPER_BOARD);
+     var randomNum1 = random.nextInt(UPPER_BOARD) + ONE;
+     var randomNum2 = random.nextInt(UPPER_BOARD) + ONE;
+     var randomNum3 = random.nextInt(UPPER_BOARD) + ONE;
 
      var case1 = format(randomNum1, randomNum2);
      var case2 = format(randomNum2, randomNum3);
