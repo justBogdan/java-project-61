@@ -35,6 +35,7 @@ public class App {
         var gcdCondition = "Find the greatest common divisor of given numbers.";
         var primeCondition = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         var progressionCondition = "What number is missing in the progression?";
+
         if (parsedNumber == GREETING_NUM) {
             Greeting.greeting();
         }

@@ -30,6 +30,6 @@ public class Prime {
     public static int generate(int min, int max) {
         var random = new Random();
 
-        return random.nextInt(max - min) + min;
+        return random.nextInt(MAX - MIN) + MIN;
     }
 }
