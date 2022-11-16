@@ -28,7 +28,6 @@ public class Engine {
                 return;
             }
         }
-
         if (counterOfTrueAnswers == COUNTER_FOR_CONGRATULATIONS) {
             System.out.println(String.format("Congratulations, %s!", username));
         }
