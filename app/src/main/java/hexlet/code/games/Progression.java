@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import java.util.Random;
-import java.util.Arrays;
 
 public class Progression {
     static final int UPPER_BOARD = 10;
@@ -10,7 +9,6 @@ public class Progression {
     static final int FRONTIER_OF_LENGTH = 5;
     static final int BOUND_OF_LENGTH = 5;
     public static String[][] progression () {
-
         var random = new Random();
         var randomStart1 = random.nextInt(UPPER_BOARD);
         var randomStart2 = random.nextInt(UPPER_BOARD);
@@ -27,7 +25,6 @@ public class Progression {
         var random = new Random(INIT_SEED);
         var randomStep = random.nextInt(UPPER_BOARD_OF_STEP);
         String[] progression = new String[lengthOfProgression];
-
         for (var i = 0; i < lengthOfProgression; i++) {
             progression[i] = Integer.toString(start);
             start += randomStep;
@@ -41,7 +38,6 @@ public class Progression {
         var copyOfProgression = progression.clone();
         var trulyAnswer = copyOfProgression[randomIndex];
         copyOfProgression[randomIndex] = "..";
-
         String[] result = new String[] {String.join(" ", copyOfProgression), trulyAnswer};
         return result;
     }
