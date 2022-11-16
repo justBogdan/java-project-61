@@ -22,8 +22,8 @@ public class Engine {
                 counterOfTrueAnswers += 1;
                 System.out.println("Correct!");
             } else {
-                var mess = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", userAns, gameLogic[i][1]);
-                var mess2= (String.format("\nLet's try again, %s!", username));
+                String mess = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", userAns, gameLogic[i][1]);
+                String mess2 = String.format("\nLet's try again, %s!", username);
                 System.out.println(mess + mess2);
                 return;
             }
