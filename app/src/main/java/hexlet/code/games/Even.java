@@ -16,7 +16,7 @@ public class Even {
         var trulyAnswer01 = case1 % 2 == 0 ? "yes" : "no";
         var trulyAnswer11 = case2 % 2 == 0 ? "yes" : "no";
         var trulyAnswer21 = case3 % 2 == 0 ? "yes" : "no";
-        String[][] cases = {{Integer.toString(case1),trulyAnswer01}, {Integer.toString(case2), trulyAnswer11}, {Integer.toString(case3), trulyAnswer21}};
+        String[][] cases = {{Integer.toString(case1), trulyAnswer01}, {Integer.toString(case2), trulyAnswer11}, {Integer.toString(case3), trulyAnswer21}};
         return cases;
     }
 }

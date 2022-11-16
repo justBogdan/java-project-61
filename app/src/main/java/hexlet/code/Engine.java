@@ -17,13 +17,13 @@ public class Engine {
             Scanner scanner1 = new Scanner(System.in);
             System.out.println(String.format("Question: %s ", gameLogic[i][0]));
             System.out.print("Your answer: ");
-            String userAnswer = scanner1.next();
-            if (userAnswer.equals(gameLogic[i][1])) {
+            String userAns = scanner1.next();
+            if (userAns.equals(gameLogic[i][1])) {
                 counterOfTrueAnswers += 1;
                 System.out.println("Correct!");
             } else {
-                var message = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", userAnswer, gameLogic[i][1]);
-                System.out.println(message);
+                var mess = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", userAns, gameLogic[i][1]);
+                System.out.println(mess);
                 System.out.println(String.format("Let's try again, %s!", username));
                 return;
             }
