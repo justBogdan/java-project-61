@@ -13,10 +13,15 @@ public class Even {
         var case1 = ran.nextInt(UPPER_BOARD);
         var case2 = ran.nextInt(UPPER_BOARD);
         var case3 = ran.nextInt(UPPER_BOARD);
-        var trulyAnswer01 = case1 % 2 == 0 ? "yes" : "no";
-        var trulyAnswer11 = case2 % 2 == 0 ? "yes" : "no";
-        var trulyAnswer21 = case3 % 2 == 0 ? "yes" : "no";
-        String[][] cases = {{Integer.toString(case1), trulyAnswer01}, {Integer.toString(case2), trulyAnswer11}, {Integer.toString(case3), trulyAnswer21}};
+        var truAnswer01 = case1 % 2 == 0 ? "yes" : "no";
+        var truAnswer11 = case2 % 2 == 0 ? "yes" : "no";
+        var truAnswer21 = case3 % 2 == 0 ? "yes" : "no";
+
+        var newCase1 = Integer.toString(case1);
+        var newCase2 = Integer.toString(case2);
+        var newCase3 = Integer.toString(case3);
+
+        String[][] cases = {{newCase1, truAnswer01}, {newCase2, truAnswer11}, {newCase3, truAnswer21}};
         return cases;
     }
 }
