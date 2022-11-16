@@ -3,9 +3,9 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Prime {
+    private static int min = 1;
+    private static int max = 30;
     public static String[][] prime() {
-        var min = 1;
-        var max = 30;
         var case1 = Integer.toString(generate(min, max));
         var case2 = Integer.toString(generate(min, max));
         var case3 = Integer.toString(generate(min, max));

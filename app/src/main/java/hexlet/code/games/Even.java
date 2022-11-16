@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import java.util.Random;
 public class Even {
+    private static int upperBoard = 20;
     public static String[][] even() {
             var gameQuestion = random();
             return gameQuestion;
@@ -9,7 +10,6 @@ public class Even {
 
     public static String[][] random() {
         var ran = new Random();
-        var upperBoard = 20;
         var case1 = ran.nextInt(upperBoard);
         var case2 = ran.nextInt(upperBoard);
         var case3 = ran.nextInt(upperBoard);
