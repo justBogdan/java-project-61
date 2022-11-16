@@ -23,8 +23,8 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 var mess = String.format("'%s' is wrong answer ;(. Correct answer was '%s'.", userAns, gameLogic[i][1]);
-                System.out.println(mess);
-                System.out.println(String.format("Let's try again, %s!", username));
+                var mess2 =(String.format("\nLet's try again, %s!", username));
+                System.out.println(mess + mess2);
                 return;
             }
             if (counterOfTrueAnswers == COUNTER_FOR_CONGRATULATIONS) {
