@@ -8,7 +8,7 @@ public class Progression {
     static final int UPPER_BOARD_OF_STEP = 4;
     static final int FRONTIER_OF_LENGTH = 5;
     static final int BOUND_OF_LENGTH = 5;
-    public static String[][] progression () {
+    public static String[][] progression() {
         var random = new Random();
         var randomStart1 = random.nextInt(UPPER_BOARD);
         var randomStart2 = random.nextInt(UPPER_BOARD);
@@ -21,7 +21,7 @@ public class Progression {
         String[][] result = new String[][] {blur(case1), blur(case2), blur(case3)};
         return result;
 }
-    public static String[] generateProgression (int start, int lengthOfProgression) {
+    public static String[] generateProgression(int start, int lengthOfProgression) {
         var random = new Random(INIT_SEED);
         var randomStep = random.nextInt(UPPER_BOARD_OF_STEP);
         String[] progression = new String[lengthOfProgression];
@@ -32,7 +32,7 @@ public class Progression {
         return progression;
     }
 
-    public static String[] blur (String[] progression) {
+    public static String[] blur(String[] progression) {
         var random = new Random();
         var randomIndex = random.nextInt(progression.length - 1);
         var copyOfProgression = progression.clone();
@@ -42,7 +42,7 @@ public class Progression {
         return result;
     }
 
-    public static int generateLength () {
+    public static int generateLength() {
         var random = new Random();
         return random.nextInt(BOUND_OF_LENGTH) + FRONTIER_OF_LENGTH;
     }
