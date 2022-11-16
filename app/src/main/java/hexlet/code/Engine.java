@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Engine {
     private static String username;
+    private static int counterOfTrueAnswers = 0;
+    static final int COUNTER_FOR_CONGRATULATIONS = 3;
     public static void init(String[][] gameLogic, String gameGreeting) {
         Scanner scanner = new Scanner(System.in);
-        var counterOfTrueAnswers = 0;
-        var counterForCongratulations = 3;
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         username = scanner.next();
@@ -27,7 +27,7 @@ public class Engine {
                 System.out.println(String.format("Let's try again, %s!", username));
                 return;
             }
-            if (counterOfTrueAnswers == counterForCongratulations) {
+            if (counterOfTrueAnswers == COUNTER_FOR_CONGRATULATIONS) {
                 System.out.println(String.format("Congratulations, %s!", username));
             }
         }

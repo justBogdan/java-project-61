@@ -9,7 +9,14 @@ import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
 public class App {
-    private static String gameNumber;
+    private  static String gameNumber;
+    static final int GREETING_NUM = 1;
+    static final int EVEN_NUM = 2;
+    static final int CALC_NUM = 3;
+    static final int GCD_NUM = 4;
+    static final int PROGRESSION_NUM = 5;
+    static final int PRIME_NUM = 6;
+    static final int EXIT_NUM = 0;
     public static void main(String[] args) {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -22,38 +29,31 @@ public class App {
         System.out.print("Your choice? ");
         gameNumber = scanner.next();
         var parsedNumber = Integer.parseInt(gameNumber);
-        var greetingNum = 1;
-        var evenNum = 2;
-        var calcNum = 3;
-        var gcdNum = 4;
-        var progressionNum = 5;
-        var primeNum = 6;
-        var exitNum = 0;
 
         var calcCondition = "What is the result of the expression?";
         var evenCondition = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         var gcdCondition = "Find the greatest common divisor of given numbers.";
         var primeCondition = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         var progressionCondition = "What number is missing in the progression?";
-        if (parsedNumber == greetingNum) {
+        if (parsedNumber == GREETING_NUM) {
             Greeting.greeting();
         }
-        if (parsedNumber == evenNum) {
+        if (parsedNumber == EVEN_NUM) {
             Engine.init(Even.even(), evenCondition);
         }
-        if (parsedNumber == calcNum) {
+        if (parsedNumber == CALC_NUM) {
             Engine.init(Calc.calc(), calcCondition);
         }
-        if (parsedNumber == gcdNum) {
+        if (parsedNumber == GCD_NUM) {
             Engine.init(GCD.gcd(), gcdCondition);
         }
-        if (parsedNumber == progressionNum) {
+        if (parsedNumber == PROGRESSION_NUM) {
             Engine.init(Progression.progression(), progressionCondition);
         }
-        if (parsedNumber == primeNum) {
+        if (parsedNumber == PRIME_NUM) {
             Engine.init(Prime.prime(), primeCondition);
         }
-        if (parsedNumber == exitNum) {
+        if (parsedNumber == EXIT_NUM) {
             scanner.close();
         }
     }

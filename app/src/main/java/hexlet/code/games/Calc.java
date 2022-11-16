@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Calc {
-    private static int upperBoard = 20;
+     static final int UPPER_BOARD = 20;
     private static String trulyAnswer;
     public static String[][] calc() {
         var case1 = generate("-");
@@ -14,8 +14,8 @@ public class Calc {
     }
     public static String[] generate(String sign) {
         var random = new Random();
-        var randomNum1 = random.nextInt(upperBoard);
-        var randomNum2 = random.nextInt(upperBoard);
+        var randomNum1 = random.nextInt(UPPER_BOARD);
+        var randomNum2 = random.nextInt(UPPER_BOARD);
 
         if (sign.equals("+")) {
             trulyAnswer = Integer.toString(randomNum1 + randomNum2);

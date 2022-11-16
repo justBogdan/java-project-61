@@ -3,12 +3,12 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Prime {
-    private static int min = 1;
-    private static int max = 30;
+    static final int MIN = 1;
+    static final int MAX = 30;
     public static String[][] prime() {
-        var case1 = Integer.toString(generate(min, max));
-        var case2 = Integer.toString(generate(min, max));
-        var case3 = Integer.toString(generate(min, max));
+        var case1 = Integer.toString(generate(MIN, MAX));
+        var case2 = Integer.toString(generate(MIN, MIN));
+        var case3 = Integer.toString(generate(MIN, MAX));
         String[][] result = new String[][]{{case1, isPrime(case1)}, {case2, isPrime(case2)}, {case3, isPrime(case3)}};
         return result;
     }

@@ -4,17 +4,17 @@ import java.util.Random;
 import java.util.Arrays;
 
 public class Progression {
-    private static int upperBoard = 10;
-    private static int initSeed = 1;
-    private static int upperBoardOfStep = 4;
-    private static int frontierOfLength = 5;
-    private static int boundOfLength = 5;
+    static final int UPPER_BOARD = 10;
+    static final int INIT_SEED = 1;
+    static final int UPPER_BOARD_OF_STEP = 4;
+    static final int FRONTIER_OF_LENGTH = 5;
+    static final int BOUND_OF_LENGTH = 5;
     public static String[][] progression () {
 
         var random = new Random();
-        var randomStart1 = random.nextInt(upperBoard);
-        var randomStart2 = random.nextInt(upperBoard);
-        var randomStart3 = random.nextInt(upperBoard);
+        var randomStart1 = random.nextInt(UPPER_BOARD);
+        var randomStart2 = random.nextInt(UPPER_BOARD);
+        var randomStart3 = random.nextInt(UPPER_BOARD);
 
         var case1 = generateProgression(randomStart1, generateLength());
         var case2 = generateProgression(randomStart2, generateLength());
@@ -24,8 +24,8 @@ public class Progression {
         return result;
 }
     public static String[] generateProgression (int start, int lengthOfProgression) {
-        var random = new Random(initSeed);
-        var randomStep = random.nextInt(upperBoardOfStep);
+        var random = new Random(INIT_SEED);
+        var randomStep = random.nextInt(UPPER_BOARD_OF_STEP);
         String[] progression = new String[lengthOfProgression];
 
         for (var i = 0; i < lengthOfProgression; i++) {
@@ -48,6 +48,6 @@ public class Progression {
 
     public static int generateLength () {
         var random = new Random();
-        return random.nextInt(boundOfLength) + frontierOfLength;
+        return random.nextInt(BOUND_OF_LENGTH) + FRONTIER_OF_LENGTH;
     }
 }
